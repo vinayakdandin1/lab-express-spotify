@@ -1,0 +1,28 @@
+
+{{#each somesongs}} 
+
+<h3>{{this.name}}</h3>
+
+{{#if this.preview_url}}
+
+<figure>
+    <figcaption>Listen to preview:</figcaption>
+    <audio
+        controls
+        src="{{this.preview_url}}">
+            Your browser does not support the
+            <code>audio</code> element.
+    </audio>
+</figure>
+
+{{else}}
+
+<h5>Preview does not exist</h5>
+<br>
+
+
+{{/if}}
+
+
+
+{{/each}}
